@@ -1,0 +1,33 @@
+.formss {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.h11 {
+    margin-left: 90px;
+}
+
+.table_custom{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.loginn{
+    /* background-color: brown; */
+    margin-left: 250px;
+    margin-right: 300px;
+}
+
+.login_heading{
+    margin-left: 525px;
+}
+
+.alert-fixed {
+    position:fixed; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%;
+    z-index:9999; 
+    border-radius:0px
+}

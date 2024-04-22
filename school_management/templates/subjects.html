@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %} Subjects {% endblock %}
+
+{% block top_heading %}Subjects{% endblock %} 
+
+{% block user_first_name1 %}{{user.first_name}} {% endblock %} 
+{% block user_first_name2 %}{{user.first_name}} {% endblock %} 
+{% block user_last_name %}{{user.last_name}} {% endblock %}
+{% block username %}{{user.username}} {% endblock %}
+
+ 
+{% block content %}
+<section class="section dashboard">
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Subjects Table</h5>
+
+              <!-- Default Table -->
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Subject Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for subject in subjects %}
+                  <tr>
+                    <td>{{subject.id}}</td>
+                    <td>{{subject.subject}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              <!-- End Default Table Example -->
+            </div>
+          </div>
+    </div>
+
+      
+
+
+</section>
+
+{% endblock %}

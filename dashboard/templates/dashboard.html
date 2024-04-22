@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %} Classes {% endblock %}
+
+{% block top_heading %}Classes{% endblock %} 
+
+{% block user_first_name1 %}{{user.first_name}} {% endblock %} 
+{% block user_first_name2 %}{{user.first_name}} {% endblock %} 
+{% block user_last_name %}{{user.last_name}} {% endblock %}
+{% block username %}{{user.username}} {% endblock %}
+
+ 
+{% block content %}
+<section class="section dashboard">
+    <div class="row">
+        <div class="card">
+            <div class="card-body data_table">
+              <h5 class="card-title">Summary Table</h5>
+
+              <!-- Default Table -->
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Student</th>
+                    <th scope="col">School</th>
+                    <th scope="col">Class</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Assesment Area</th>
+                    <th scope="col">Year Level</th>
+                    <th scope="col">Answer</th>
+                    <th scope="col">Correct Answer</th>
+                    <th scope="col">Award</th>
+                    <th scope="col">Sydney Participant</th>
+                    <th scope="col">Sydney Percentile</th>
+                    <th scope="col">Correct Answer Percentage Per Class</th>
+                    <th scope="col">Student Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for record in summary_data %}
+                  <tr>
+                    <td>{{record.student.full_name}}</td>
+                    <td>{{record.school.school_name}}</td>
+                    <td>{{record.school_class.class_name}}</td>
+                    <td>{{record.subject.subject}}</td>
+                    <td>{{record.assesment_area.assesment_area_name}}</td>
+                    <td>{{record.year_level_name}}</td>
+                    <td>{{record.answer.answeres}}</td>
+                    <td>{{record.correct_answer.answeres}}</td>
+                    <td>{{record.award.award_name}}</td>
+                    <td>{{record.sydney_participant}}</td>
+                    <td>{{record.sydney_percentile}}</td>
+                    <td>{{record.correct_answer_percentage_per_class}}</td>
+                    <td>{{record.student_score}}</td>
+                    <td>{{record.class_name}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              <!-- End Default Table Example -->
+            </div>
+          </div>
+    </div>
+
+      
+
+
+</section>
+
+{% endblock %}
